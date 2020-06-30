@@ -1,0 +1,10 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtlaWpvIiwiaWQiOiI1ZWUzNTY4NGVmYzAxMjFjZTA5NmRiYTciLCJpYXQiOjE1OTIyMjA1MzR9.2KC4Jm8TRe5-PdRtwMYROhF9Sb5fUnNLVZEdu_dgGdQ
+
+{
+  "title": "autorisoitu",
+  "author": "author",
+  "url": "url",
+  "likes": 0
+}
