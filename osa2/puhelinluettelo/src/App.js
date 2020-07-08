@@ -65,19 +65,28 @@ const App = () => {
               setNotification(null)
             }, 5000)
           })
+          .catch(error => {
+            console.log(error.response.data.error)
+            setErrorValue(true)
+            setNotification(error.response.data.error)
+            setTimeout(() => {
+              setNotification(null)
+              setErrorValue(false)
+            }, 5000)
+          })
     }
   }
 
   const removePerson = event => {
     //console.log(event)
     //console.log(event.target)
-    const id = parseInt(event.target.id)
+    const id = event.target.id
     //console.log(typeof(id))
     //console.log(id)
     const person = persons.find(p => p.id === id)
     //console.log(typeof(person.id))
     //console.log(person.id)
-    //console.log(person)
+    console.log(person)
     if (window.confirm(`Are you sure you want to delete ${person.name}`)) {
       personService
         .remove(id)
